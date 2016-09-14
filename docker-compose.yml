@@ -51,7 +51,7 @@ worker:
     - ./data:/tmp/data
 
 zeppelin:
-  image: ainagy/docker-zeppelin
+  image: ainagy/zeppelin
   command: /incubator-zeppelin/bin/zeppelin.sh
   hostname: zeppelin
   links:

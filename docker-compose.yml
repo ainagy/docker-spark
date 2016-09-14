@@ -49,3 +49,19 @@ worker:
   volumes:
     - ./conf/worker:/conf
     - ./data:/tmp/data
+
+zeppelin:
+  image: ainagy/zeppelin
+  command: /start-script.sh
+  hostname: zeppelin
+  links:
+    - master
+  expose:
+    - 8080
+    - 8081
+  ports: 
+    - "18080:8080"
+    - "18081:8081"
+  volumes:
+    - ./conf/master:/conf
+    - ./data:/tmp/data

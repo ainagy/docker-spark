@@ -52,7 +52,8 @@ worker:
 
 zeppelin:
   image: ainagy/zeppelin
-  command: /incubator-zeppelin/bin/zeppelin.sh
+#  command: /incubator-zeppelin/bin/zeppelin.sh
+  command: /incubator-zeppelin/bin/zeppelin-daemon.sh start; while true; do sleep 1000; done
   hostname: zeppelin
   links:
     - master

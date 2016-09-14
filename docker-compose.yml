@@ -51,8 +51,8 @@ worker:
     - ./data:/tmp/data
 
 zeppelin:
-  image: ainagy/zeppelin
-  command: /start-script.sh
+  image: ainagy/docker-zeppelin
+  command: /incubator-zeppelin/bin/zeppelin.sh
   hostname: zeppelin
   links:
     - master
@@ -65,3 +65,4 @@ zeppelin:
   volumes:
     - ./conf/master:/conf
     - ./data:/tmp/data
+

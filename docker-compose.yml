@@ -50,20 +50,20 @@ worker:
     - ./conf/worker:/conf
     - ./data:/tmp/data
 
-zeppelin:
-  image: ainagy/zeppelin
+#zeppelin:
+#  image: ainagy/zeppelin
 #  command: /incubator-zeppelin/bin/zeppelin.sh
-  command: /incubator-zeppelin/bin/zeppelin-daemon.sh start; while true; do sleep 1000; done
-  hostname: zeppelin
-  links:
-    - master
-  expose:
-    - 8080
-    - 8081
-  ports: 
-    - "18080:8080"
-    - "18081:8081"
-  volumes:
-    - ./conf/master:/conf
-    - ./data:/tmp/data
+#  command: /incubator-zeppelin/bin/zeppelin-daemon.sh start; while true; do sleep 1000; done
+#  hostname: zeppelin
+#  links:
+#    - master
+#  expose:
+#    - 8080
+#    - 8081
+#  ports: 
+#    - "18080:8080"
+#    - "18081:8081"
+#  volumes:
+#    - ./conf/master:/conf
+#    - ./data:/tmp/data
 
